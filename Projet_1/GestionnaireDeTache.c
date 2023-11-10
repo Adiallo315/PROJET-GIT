@@ -2,13 +2,15 @@
 #include <string.h>
 
 
+
  const int MAX_TACHES = 100;
 int main() {
    
     char taches[MAX_TACHES][100]; 
     int compteurDeTaches = 0;
-
+    
     int choix;
+    int pos;
     do {
         printf("Menu :\n");
         printf("1: Ajouter une tâche\n");
@@ -30,7 +32,27 @@ int main() {
                 }
                 break;
             case 2:
-                
+            
+                     for (int i = 0; i < compteurDeTaches; i++) {
+                    printf("%d: %s\n", i + 1, taches[i]);
+                    }
+                    printf("Quelles taches vous voulais supprimer ? :");
+                    scanf("%d", &pos);
+
+                    if(pos > compteurDeTaches){
+                        printf("suppression impossible.\n");
+                    }
+                    else{
+                       for (int i = pos; i < compteurDeTaches - 1; i++) {
+                       taches[i] == taches[i - 1];
+                    }
+                    compteurDeTaches--;
+                    }
+                    for (int i = 0; i < compteurDeTaches; i++) {
+                    printf("%d: %s\n", i + 1, taches[i]);
+                    }
+                    
+               
                 break;
             case 3:
 
