@@ -1,1 +1,1 @@
-console.lo()
+console.l()
