@@ -1,4 +1,4 @@
-name: Linter Action
+name: Linter
 
 on:
   push:
@@ -18,11 +18,9 @@ jobs:
       with:
         python-version: 3.7
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-
-    - name: Run linter
+    - name: Lint JavaScript
       run: |
         python linter.py
+      working-directory: path/to/your/project
+
+
