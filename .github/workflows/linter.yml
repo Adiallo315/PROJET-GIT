@@ -19,8 +19,6 @@ jobs:
         python-version: 3.7
 
     - name: Lint JavaScript
-      run: |
-        python linter.py
-      working-directory: path/to/your/project
+      run: python linter.py
 
 
