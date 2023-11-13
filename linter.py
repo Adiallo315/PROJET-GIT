@@ -5,7 +5,7 @@ def lint_javascript(code):
 
     errors = []
     for i, line in enumerate(lines, start=1):
-        
+        # Nouvelle expression régulière pour détecter l'absence de point-virgule à la fin
         if not re.search(r';\s*$', line):
             errors.append(f"Ligne {i}: Pas de point-virgule à la fin de la ligne")
 
@@ -21,3 +21,5 @@ if linting_errors:
         print(f"Erreur de style : {error}")
 else:
     print("Le code respecte les règles de style.")
+
+
